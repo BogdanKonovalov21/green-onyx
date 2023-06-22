@@ -1,0 +1,15 @@
+.footer-mobile {
+  background-image: url("../../../public/images/background.png");
+  background-size: cover;
+  background-position: center center;
+}
+
+.bordered-link::after {
+  content: "";
+  position: absolute;
+  right: -33%;
+  top: 25%;
+  height: 24px;
+  width: 2px;
+  background: #898989;
+}

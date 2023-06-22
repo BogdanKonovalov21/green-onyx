@@ -1,0 +1,21 @@
+$m-xl: 1280px;
+$m-lg: 1024px;
+$m-md: 768px;
+
+@mixin lg {
+    @media only screen and (max-width: #{$m-xl}) {
+        @content;
+    }   
+}
+
+@mixin md {
+    @media only screen and (max-width: #{$m-lg}) {
+        @content;
+    }
+}
+
+@mixin sm {
+    @media only screen and (max-width: #{$m-md}) {
+        @content;
+    }
+}

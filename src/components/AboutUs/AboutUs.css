@@ -1,0 +1,35 @@
+.ReactCollapse--collapse {
+  will-change: height;
+  transition: height 500ms ease-out;
+}
+/* 
+.about-us-first {
+  background-image: url(../../../public/images/backgroundGrass/grass1_mobile.svg),
+    url(../../../public/images/backgroundGrass/grass2_mobile.svg),
+    url(../../../public/images/backgroundGrass/grass3_mobile.svg);
+  background-position: right top 40%, left bottom, right bottom;
+  background-repeat: no-repeat;
+} */
+
+/* .about-us-second {
+  background-image: url(../../../public/images/backgroundGrass/grass4.svg);
+  background-position: right;
+  background-repeat: no-repeat;
+  background-size: 80px;
+} */
+
+@media (min-width: 1024px) {
+  /* #company {
+    background-image: url(../../../public/images/backgroundGrass/grass1.svg);
+    background-position: left top;
+    background-repeat: no-repeat;
+  }
+  .about-us-first {
+    background-image: url(../../../public/images/backgroundGrass/grass2.svg),
+      url(../../../public/images/backgroundGrass/grass3.svg);
+    background-position: left bottom, left 140px bottom;
+  }
+  .about-us-second {
+    background-size: 150px;
+  } */
+}

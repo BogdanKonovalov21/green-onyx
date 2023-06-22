@@ -1,0 +1,11 @@
+.statistic {
+  background-image: url(../../../public/images/background.png);
+  background-size: cover;
+  color: #ffff;
+}
+
+@media (min-width: 768px) {
+  .statistic {
+    background: #0f0f0e;
+  }
+}

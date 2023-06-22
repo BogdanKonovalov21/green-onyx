@@ -1,0 +1,38 @@
+.header {
+  background: #070707;
+  height: 90px;
+}
+.link.active::after {
+  content: "";
+  display: block;
+  position: absolute;
+  border-radius: 50%;
+  background-color: #ffe458;
+  width: 6px;
+  height: 6px;
+  left: -10px;
+  top: 40%;
+  transform: translateX(-50%);
+  transition: opacity 0.3s ease-in-out;
+  z-index: 50;
+}
+
+@media (min-width: 1024px) {
+  .header {
+    background: rgba(0, 0, 0, 0.76);
+  }
+  .link.active::after {
+    content: "";
+    display: block;
+    position: absolute;
+    border-radius: 50%;
+    background-color: #ffe458;
+    width: 6px;
+    height: 6px;
+    left: 50%;
+    top: 25px;
+    transform: translateX(-50%);
+    transition: opacity 0.3s ease-in-out;
+    z-index: 50;
+  }
+}

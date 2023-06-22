@@ -1,0 +1,87 @@
+@import '../../styles/variables';
+@import '../../styles/mixins';
+
+.subscription {
+  background: $pale-ivory;
+  position: relative;
+  z-index: 0;
+  overflow: hidden;
+
+  &:before {
+    content: '';
+    position: absolute;
+    top: 20%;
+    left: 10%;
+    width: 326px;
+    height: 350px;
+    background-repeat: no-repeat;
+    background-size: 75%;
+    background-image: url('../../../public/images/subscribe_grass.svg');
+    z-index: -1;
+  };
+
+  &:after {
+    content: '';
+    position: absolute;
+    right: -25px;
+    bottom: -25px;
+    height: 150px;
+    width: 150px;
+    z-index: -1;
+    background-repeat: no-repeat;
+    background-size: 100%;
+    background-image: url('../../../public/images/portfolio_central_grass.svg');
+    transform: rotate(180deg);
+  }
+}
+
+.form {
+  width: 750px;
+}
+
+.form-input {
+  width: 669px;
+}
+
+.form-button {
+  background: $yellow !important;
+}
+
+@include lg {
+  .subscription {
+    &:before {
+      left: 1%;
+    }
+  }
+}
+
+@include md {
+  .subscription {
+    &:before {
+      background-size: 60%;
+    }
+
+    &:after {
+      background-size: 60%;
+    }
+  }
+}
+
+@include sm {
+  .subscription {
+    &:before {
+      background-image: url('../../../public/images/portfolio_small_grass.svg');
+      left: 90%;
+      top: 75%;
+      width: 100px;
+      height: 100px;
+    };
+
+    &:after {
+      transform: rotate(0deg);
+      background-size: 50%;
+      top: 55%;
+      left: -5px;
+    }
+  }
+};

@@ -1,0 +1,18 @@
+.contact-us {
+  background-image: url("../../../../public/images/background.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+.form-input {
+  border: 1px solid hsl(228, 17%, 89%);
+  border-radius: 15px;
+  width: 100%;
+}
+.contact-us-form-button {
+  background: #ffd66d !important;
+  border-radius: 15px;
+}
+.contact-icon {
+  border: 0.3px solid #000000;
+}

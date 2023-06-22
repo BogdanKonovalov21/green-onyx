@@ -1,0 +1,140 @@
+@import '../../styles/variables';
+@import '../../styles/mixins';
+
+.container {
+  position: relative;
+  color: $color-text;
+  
+  &:before {
+    content: '';
+    position: absolute;
+    top: 125px;
+    width: 200px;
+    height: 850px;
+    z-index: 1;
+    background-repeat: no-repeat;
+    background-image: url('../../../public/images/portfolio_grass.svg');
+  }
+
+  &:after {
+    content: '';
+    position: absolute;
+    left: 0px;
+    right: 175px;
+    top: 50px;
+    bottom: 0px;
+    height: 65px;
+    width: 65px;
+    margin: auto;
+    background-repeat: no-repeat;
+    background-image: url('../../../public/images/portfolio_central_grass.svg');
+  }
+}
+
+.button {
+  border-bottom: 3px solid $dark;
+}
+
+.numeric {
+  cursor: pointer;
+}
+
+.active {
+  position: relative;
+  width: 65px;
+  cursor: default;
+
+  &:after {
+    position: absolute;
+    content: '';
+    left: calc(100% + 0.25rem);
+    top: 50%;
+    left: 25px;
+    width: 40px;
+    height: 2px;
+    background-color: $dark;
+  }
+}
+
+.hide,
+.show {
+  transition: opacity 0.4s ease-in-out;
+}
+
+.hide {
+  opacity: 0;
+}
+
+.show {
+  opacity: 1;
+}
+
+@include lg {
+  .container {
+    &:before {
+      background-size: 65%;
+      top: 80px;
+      opacity: 75%;
+    }
+
+    &:after {
+      content: none;
+    }
+  }
+}
+
+@include md {
+  .container {
+    &:before {
+      background-size: 65%;
+      top: 0px;
+      opacity: 75%;
+    }
+
+    &:after {
+      content: none;
+    }
+  }
+}
+
+@include sm {
+  .container {
+    &:before {
+      content: none;
+    }
+
+    &:after {
+      content: '';
+      top: 0px;
+      bottom: 85%;
+      left: 75%;
+      right: 0px;
+    }
+  }
+
+  .active {
+    width: 0px;
+    &:after {
+      content: none;
+    };
+
+    &:before {
+      color: $yellow;
+    }
+  }
+
+  .active,
+  .numeric {
+    font-size: 0;
+    line-height: 0;
+    position: relative;
+
+    &:before {
+      content: "\00B7";
+      font-size: 54px;
+      font-weight: bold;
+      width: 5px;
+      height: 5px;
+    }
+  }
+}
