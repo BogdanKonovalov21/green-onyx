@@ -4,31 +4,31 @@
 .container {
   position: relative;
   color: $color-text;
-  
-  &:before {
-    content: '';
-    position: absolute;
-    top: 125px;
-    width: 200px;
-    height: 850px;
-    z-index: 1;
-    background-repeat: no-repeat;
-    background-image: url('../../../public/images/portfolio_grass.svg');
-  }
 
-  &:after {
-    content: '';
-    position: absolute;
-    left: 0px;
-    right: 175px;
-    top: 50px;
-    bottom: 0px;
-    height: 65px;
-    width: 65px;
-    margin: auto;
-    background-repeat: no-repeat;
-    background-image: url('../../../public/images/portfolio_central_grass.svg');
-  }
+  // &:before {
+  //   content: '';
+  //   position: absolute;
+  //   top: 125px;
+  //   width: 200px;
+  //   height: 850px;
+  //   z-index: 1;
+  //   background-repeat: no-repeat;
+  //   background-image: url('../../../public/images/portfolio_grass.svg');
+  // }
+
+  // &:after {
+  //   content: '';
+  //   position: absolute;
+  //   left: 0px;
+  //   right: 175px;
+  //   top: 50px;
+  //   bottom: 0px;
+  //   height: 65px;
+  //   width: 65px;
+  //   margin: auto;
+  //   background-repeat: no-repeat;
+  //   background-image: url('../../../public/images/portfolio_central_grass.svg');
+  // }
 }
 
 .button {
@@ -116,7 +116,7 @@
     width: 0px;
     &:after {
       content: none;
-    };
+    }
 
     &:before {
       color: $yellow;
@@ -130,7 +130,7 @@
     position: relative;
 
     &:before {
-      content: "\00B7";
+      content: '\00B7';
       font-size: 54px;
       font-weight: bold;
       width: 5px;

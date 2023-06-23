@@ -1,11 +1,17 @@
-"use client";
-import { useState } from "react";
-import Image from "next/image";
-import image1 from "../../../public/images/portfolio/image1.png";
-import image2 from "../../../public/images/portfolio/image2.jpg";
-import image3 from "../../../public/images/portfolio/image3.jpg";
-import image4 from "../../../public/images/portfolio/image4.jpg";
-import styles from "./Portfolio.module.scss";
+'use client';
+import { useState } from 'react';
+import styles from './Portfolio.module.scss';
+
+import ImageSlider from './ImageSlider/ImageSlider';
+import {
+  gatneImages,
+  tarasivkaImages,
+  shevchenkoveImages,
+  katyzhankaImages,
+  zabutchaImages,
+  gavrilivkaImages,
+} from './images';
+import ImageSliderMobile from './ImageSlider/ImageSliderMobile';
 
 const showStatus = {
   hide: styles.hide,
@@ -14,33 +20,49 @@ const showStatus = {
 
 const Portfolio: React.FC = (): JSX.Element => {
   const [selectedImage, setSelectedImage] = useState(0);
-  const [show, setShow] = useState("");
+  const [show, setShow] = useState('');
 
   const portfolioData = [
     {
-      text: `Перегляньте деякі з наших минулих проектів ландшафтного дизайну.`,
-      image: image1,
-      alt: "About image 1",
+      text: `Влаштування рулонного газону с. Гатне`,
+      shortText: 'с. Гатне',
+      alt: 'About image 1',
+      images: gatneImages,
     },
     {
-      text: `Перегляньте деякі з наших минулих проектів ландшафтного дизайну.`,
-      image: image2,
-      alt: "About image 2",
+      text: `Комплексний благоустрій с. Гаврилівка.`,
+      shortText: 'с. Гаврилівка',
+      alt: 'About image 2',
+      images: gavrilivkaImages,
     },
     {
-      text: `Перегляньте деякі з наших минулих проектів ландшафтного дизайну.`,
-      image: image3,
-      alt: "About image 3",
+      text: `Комплексний благоустрій с. Забуччя.`,
+      shortText: 'с. Забуччя',
+      alt: 'About image 3',
+      images: zabutchaImages,
     },
     {
-      text: `Перегляньте деякі з наших минулих проектів ландшафтного дизайну.`,
-      image: image4,
-      alt: "About image 4",
+      text: `Комплексний благоустрій с. Катюжанка.`,
+      shortText: 'с. Катюжанка',
+      alt: 'About image 4',
+      images: katyzhankaImages,
+    },
+    {
+      text: `Комплексний благоустрій с. Тарасівка.`,
+      shortText: 'с. Тарасівка',
+      alt: 'About image 4',
+      images: tarasivkaImages,
+    },
+    {
+      text: `Комплексний благоустрій с. Шевченкове.`,
+      shortText: 'с. Шевченкове',
+      alt: 'About image 4',
+      images: shevchenkoveImages,
     },
   ];
 
   const checkActive = (id: number): string =>
-    selectedImage === id ? `font-bold relative ${styles.active}` : "";
+    selectedImage === id ? `font-bold relative ${styles.active}` : '';
 
   const changeElement = (): void => {
     if (show === showStatus.hide) return;
@@ -69,32 +91,24 @@ const Portfolio: React.FC = (): JSX.Element => {
 
   return (
     <section className={styles.container} id="portfolio">
-      <div className="xl:container px-5 mx-auto md:px-0 py-10 xl:pt-24 xl:pb-28 grid md:grid-cols-2">
-        <div className="flex flex-col justify-between md:py-10 md:ml-10 z-10">
-          <div className="md:mr-10">
-            <p className="text-2xl">Наша робота</p>
-            <h2
-              className={`text-2xl md:text-xl lg:text-2xl xl:text-3xl h-48 mt-7 ${show}`}
-            >
-              {portfolioData[selectedImage].text}
-            </h2>
-          </div>
-          <button
-            className={`text-xl w-24 uppercase text-left pb-1 md:visible invisible ${styles.button}`}
-            onClick={changeElement}
-            disabled={show === showStatus.hide}
+      <div className=" md:max-w-7xl px-10 mx-auto py-10 xl:pt-24 xl:pb-28">
+        <h2 className="font-bold text-5xl mb-14 ">Наша робота</h2>
+
+        <div className="">
+          <p
+            className={`text-2xl md:text-xl lg:text-2xl xl:text-3xl my-14 md:my-7 ${show}`}
           >
-            Далі
-          </button>
+            {portfolioData[selectedImage].text}
+          </p>
         </div>
-        <div className="flex items-center relative mx-auto justify-end md:justify-center flex-row-reverse md:flex-row md:pb-0 pb-10">
-          <div className={`md:pr-10 ${show}`}>
-            <Image
-              src={portfolioData[selectedImage].image}
-              alt={portfolioData[selectedImage].alt}
-            />
+
+        <div className="flex items-center relative mx-auto justify-center flex-col-reverse md:flex-row md:pb-0 pb-10">
+          <div className={`flex md:pr-10 ${show}`}>
+            <ImageSlider images={portfolioData[selectedImage].images} />
+            <ImageSliderMobile images={portfolioData[selectedImage].images} />
           </div>
-          <div className="text-xl -translate-x-5 absolute md:relative md:px-0 flex flex-col gap-7">
+
+          <div className="text-xl xs:translate-y-36 md:translate-y-0 md:-translate-x-5 absolute md:relative md:px-0 flex flex-row md:flex-col gap-7">
             {portfolioData.map(
               (el, index: number): JSX.Element => (
                 <div
@@ -102,12 +116,27 @@ const Portfolio: React.FC = (): JSX.Element => {
                   onClick={() => selectElement(index)}
                   className={`${styles.numeric} ${checkActive(index)}`}
                 >
-                  {index >= 9 ? "" : 0}
-                  {index + 1}
+                  <p>
+                    {index >= 9 ? '' : 0}
+                    {index + 1}
+                    {/* <span className={checkActive(index)}>
+                      {portfolioData[selectedImage].shortText}
+                    </span> */}
+                  </p>
                 </div>
               )
             )}
           </div>
+        </div>
+
+        <div className="">
+          <button
+            className={`text-xl w-24 uppercase text-left pb-1 md:visible invisible ${styles.button}`}
+            onClick={changeElement}
+            disabled={show === showStatus.hide}
+          >
+            Далі
+          </button>
         </div>
       </div>
     </section>

@@ -1,12 +1,12 @@
-"use client";
-import Image from "next/image";
-import flower from "../../../../public/images/flower.svg";
-import "./AboutUsThird.css";
-import CallbackButton from "@/components/CallbackButton/CallbackButton";
+'use client';
+import Image from 'next/image';
+import flower from '../../../../public/images/flower.svg';
+import './AboutUsThird.css';
+import CallbackButton from '@/components/CallbackButton/CallbackButton';
 
 const AboutUsThird: React.FC = (): JSX.Element => {
   return (
-    <div className="lg:max-w-7xl mx-auto flex justify-center">
+    <div className="lg:max-w-7xl mx-auto mt-14 flex justify-center">
       <div className="flex flex-col items-center px-10">
         <div className="bg-block sm:w-full p-10 pb-16">
           <div className="flex justify-between items-center">

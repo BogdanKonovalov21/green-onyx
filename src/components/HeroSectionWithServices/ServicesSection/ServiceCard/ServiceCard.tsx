@@ -1,6 +1,6 @@
-import Image from "next/image";
-import ReactCardFlip from "react-card-flip";
-import arrow from "../../../../../public/images/arrow.svg";
+import Image from 'next/image';
+import ReactCardFlip from 'react-card-flip';
+import arrow from '../../../../../public/images/arrow.svg';
 
 interface Card {
   title: string;
@@ -12,7 +12,7 @@ interface Props {
   index: number;
   card: Card;
   flippedStates: boolean[];
-  handleCardFlip: (index:number) => void;
+  handleCardFlip: (index: number) => void;
 }
 
 const ServiceCard: React.FC<Props> = ({
@@ -29,10 +29,12 @@ const ServiceCard: React.FC<Props> = ({
       containerClassName="blockItem"
     >
       <div className="flex flex-col items-center gap-5">
-        <Image src={card.image} alt="image" className="max-h-40" />
-        <p className="text-3xl leading-8 text-center">{card.title}</p>
+        <Image src={card.image} alt="image" className="h-40" />
+        <p className="text-3xl h-24 leading-8 text-center flex items-center">
+          {card.title}
+        </p>
         <button
-          className="text-lg underline"
+          className="text-lg underline "
           onClick={() => handleCardFlip(index)}
         >
           Читати більше

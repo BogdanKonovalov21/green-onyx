@@ -23,19 +23,9 @@ const FooterMobile: React.FC = (): JSX.Element => {
 
         <div className="flex justify-end items-center">
           <ul className="grid grid-cols-2 gap-7">
-            <li className="relative ">
-              <a href="#" className="bordered-link">
-                <Image src={facebook} alt="facebook" width={40} />
-              </a>
-            </li>
             <li>
               <a href="#">
                 <Image src={instagram} alt="instagram" width={40} />
-              </a>
-            </li>
-            <li className="relative">
-              <a href="#" className="bordered-link">
-                <Image src={twitter} alt="twitter" width={40} />
               </a>
             </li>
             <li>
