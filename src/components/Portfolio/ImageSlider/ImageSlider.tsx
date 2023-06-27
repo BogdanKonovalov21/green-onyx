@@ -1,21 +1,25 @@
-import { useState } from 'react';
 import Image from 'next/image';
+
+import { SliderProps } from '@/interfaces/ImageSliderProps';
 
 import leftArrow from '../../../../public/images/icons/left-arrow.png';
 import rightArrow from '../../../../public/images/icons/right-arrow.png';
 
-const ImageSlider = ({ images }: any) => {
-  const [currentIndex, setCurrentIndex] = useState(0);
+const ImageSlider: React.FC<SliderProps> = ({
+  images,
+  currentIndex,
+  setCurrentIndex,
+}): JSX.Element => {
 
   const prevSlide = () => {
-    setCurrentIndex((prevIndex) =>
-      prevIndex === 0 ? images.length - 2 : prevIndex - 2
+    setCurrentIndex((prevIndex: number) =>
+      prevIndex === 0 ? images.length - 1 : prevIndex - 1
     );
   };
 
   const nextSlide = () => {
-    setCurrentIndex((prevIndex) =>
-      prevIndex === images.length - 2 ? 0 : prevIndex + 2
+    setCurrentIndex((prevIndex: number) =>
+      prevIndex === images.length - 1 ? 0 : prevIndex + 1
     );
   };
 
@@ -29,17 +33,8 @@ const ImageSlider = ({ images }: any) => {
           <Image src={leftArrow} alt="left arrow" width={20} height={20} />
         </button>
         <div className="slide-wrapper">
-          <div className="slide flex gap-5">
-            <Image
-              src={images[currentIndex]}
-              alt="Slide 1"
-              className="w-96 h-48"
-            />
-            <Image
-              src={images[currentIndex + 1]}
-              alt="Slide 2"
-              className="w-96 h-48"
-            />
+          <div className="slide max-h-96 max-w-3xl flex gap-5">
+            <Image src={images[currentIndex]} alt="Slide 1" />
           </div>
         </div>
         <button

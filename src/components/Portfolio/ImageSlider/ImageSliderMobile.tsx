@@ -1,21 +1,24 @@
-import { useState } from 'react';
 import Image from 'next/image';
 import { useSwipeable } from 'react-swipeable';
+
+import { SliderProps } from '@/interfaces/ImageSliderProps';
 
 import leftArrow from '../../../../public/images/icons/left-arrow.png';
 import rightArrow from '../../../../public/images/icons/right-arrow.png';
 
-const ImageSliderMobile = ({ images }: any) => {
-  const [currentIndex, setCurrentIndex] = useState(0);
-
+const ImageSliderMobile: React.FC<SliderProps> = ({
+  images,
+  currentIndex,
+  setCurrentIndex,
+}) => {
   const prevSlide = () => {
-    setCurrentIndex((prevIndex) =>
+    setCurrentIndex((prevIndex: number) =>
       prevIndex === 0 ? images.length - 1 : prevIndex - 1
     );
   };
 
   const nextSlide = () => {
-    setCurrentIndex((prevIndex) =>
+    setCurrentIndex((prevIndex: number) =>
       prevIndex === images.length - 1 ? 0 : prevIndex + 1
     );
   };

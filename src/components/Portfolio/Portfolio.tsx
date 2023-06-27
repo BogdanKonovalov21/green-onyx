@@ -21,6 +21,7 @@ const showStatus = {
 const Portfolio: React.FC = (): JSX.Element => {
   const [selectedImage, setSelectedImage] = useState(0);
   const [show, setShow] = useState('');
+  const [currentIndex, setCurrentIndex] = useState(0);
 
   const portfolioData = [
     {
@@ -104,8 +105,16 @@ const Portfolio: React.FC = (): JSX.Element => {
 
         <div className="flex items-center relative mx-auto justify-center flex-col-reverse md:flex-row md:pb-0 pb-10">
           <div className={`flex md:pr-10 ${show}`}>
-            <ImageSlider images={portfolioData[selectedImage].images} />
-            <ImageSliderMobile images={portfolioData[selectedImage].images} />
+            <ImageSlider
+              images={portfolioData[selectedImage].images}
+              currentIndex={currentIndex}
+              setCurrentIndex={setCurrentIndex}
+            />
+            <ImageSliderMobile
+              images={portfolioData[selectedImage].images}
+              currentIndex={currentIndex}
+              setCurrentIndex={setCurrentIndex}
+            />
           </div>
 
           <div className="text-xl xs:translate-y-36 md:translate-y-0 md:-translate-x-5 absolute md:relative md:px-0 flex flex-row md:flex-col gap-7">
@@ -113,15 +122,15 @@ const Portfolio: React.FC = (): JSX.Element => {
               (el, index: number): JSX.Element => (
                 <div
                   key={index}
-                  onClick={() => selectElement(index)}
+                  onClick={() => {
+                    selectElement(index);
+                    setCurrentIndex(0);
+                  }}
                   className={`${styles.numeric} ${checkActive(index)}`}
                 >
                   <p>
                     {index >= 9 ? '' : 0}
                     {index + 1}
-                    {/* <span className={checkActive(index)}>
-                      {portfolioData[selectedImage].shortText}
-                    </span> */}
                   </p>
                 </div>
               )

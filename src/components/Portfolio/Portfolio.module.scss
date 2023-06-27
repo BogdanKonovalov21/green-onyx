@@ -47,7 +47,6 @@
   &:after {
     position: absolute;
     content: '';
-    left: calc(100% + 0.25rem);
     top: 50%;
     left: 25px;
     width: 40px;
@@ -113,7 +112,8 @@
   }
 
   .active {
-    width: 0px;
+    width: 15px;
+    height: 5px;
     &:after {
       content: none;
     }
@@ -128,6 +128,8 @@
     font-size: 0;
     line-height: 0;
     position: relative;
+    display: flex;
+    gap: 10px;
 
     &:before {
       content: '\00B7';
