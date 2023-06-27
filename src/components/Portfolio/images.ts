@@ -1,31 +1,32 @@
-import firstGatne from '../../images/portfolio/gatne/firstGatne.jpg';
-import secondGatne from '../../images/portfolio/gatne/secondGatne.jpg';
-import thirdGatne from '../../images/portfolio/gatne/thirdGatne.jpg';
-import fourthGatne from '../../images/portfolio/gatne/fourthGatne.jpg';
+import firstGatne from '../../../public/images/portfolio/Gatne/first.jpg';
+import secondGatne from '../../../public/images/portfolio/Gatne/second.jpg';
+import thirdGatne from '../../../public/images/portfolio/Gatne/third.jpg';
+import fourthGatne from '../../../public/images/portfolio/Gatne/fourth.jpg';
 
-import firstTarasivka from '../../images/portfolio/tarasivka/firstTarasivka.jpg';
-import secondTarasivka from '../../images/portfolio/tarasivka/secondTarasivka.jpg';
-import thirdTarasivka from '../../images/portfolio/tarasivka/thirdTarasivka.jpg';
-import fourthTarasivka from '../../images/portfolio/tarasivka/fourthTarasivka.jpg';
+import firstTarasivka from '../../../public/images/portfolio/Tarasivka/first.jpg';
+import secondTarasivka from '../../../public/images/portfolio/Tarasivka/second.jpg';
+import thirdTarasivka from '../../../public/images/portfolio/Tarasivka/third.jpg';
+import fourthTarasivka from '../../../public/images/portfolio/Tarasivka/fourth.jpg';
 
-import firstShevchenkove from '../../images/portfolio/shevchenkove/firstShevchenkove.jpg';
-import secondShevchenkove from '../../images/portfolio/shevchenkove/secondShevchenkove.jpg';
-import thirdShevchenkove from '../../images/portfolio/shevchenkove/thirdShevchenkove.jpg';
-import fourthShevchenkove from '../../images/portfolio/shevchenkove/fourthShevchenkove.jpg';
+import firstShevchenkove from '../../../public/images/portfolio/Shevchenkove/first.jpg';
+import secondShevchenkove from '../../../public/images/portfolio/Shevchenkove/second.jpg';
+import thirdShevchenkove from '../../../public/images/portfolio/Shevchenkove/third.jpg';
+import fourthShevchenkove from '../../../public/images/portfolio/Shevchenkove/fourth.jpg';
 
-import firstKatyzhanka from '../../images/portfolio/katyzhanka/firstKatyzhanka.jpg';
-import secondKatyzhanka from '../../images/portfolio/katyzhanka/secondKatyzhanka.jpg';
-import thirdKatyzhanka from '../../images/portfolio/katyzhanka/thirdKatyzhanka.jpg';
-import fourthKatyzhanka from '../../images/portfolio/katyzhanka/fourthKatyzhanka.jpg';
+import firstKatyzhanka from '../../../public/images/portfolio/Katyzhanka/first.jpg';
+import secondKatyzhanka from '../../../public/images/portfolio/Katyzhanka/second.jpg';
+import thirdKatyzhanka from '../../../public/images/portfolio/Katyzhanka/third.jpg';
+import fourthKatyzhanka from '../../../public/images/portfolio/Katyzhanka/fourth.jpg';
 
-import firstZabutcha from '../../images/portfolio/zabutcha/firstZabutcha.jpg';
-import secondZabutcha from '../../images/portfolio/zabutcha/secondZabutcha.jpg';
+import firstZabutcha from '../../../public/images/portfolio/Zabutcha/first.jpg';
+import secondZabutcha from '../../../public/images/portfolio/Zabutcha/second.jpg';
 
-import firstGavrilivka from '../../images/portfolio/gavrilivka/firstGavrilivka.jpg';
-import secondGavrilivka from '../../images/portfolio/gavrilivka/secondGavrilivka.jpg';
-import thirdGavrilivka from '../../images/portfolio/gavrilivka/thirdGavrilivka.jpg';
-import fourthGavrilivka from '../../images/portfolio/gavrilivka/fourthGavrilivka.jpg';
+import firstGavrilivka from '../../../public/images/portfolio/Gavrilivka/first.jpg';
+import secondGavrilivka from '../../../public/images/portfolio/Gavrilivka/second.jpg';
+import thirdGavrilivka from '../../../public/images/portfolio/Gavrilivka/third.jpg';
+import fourthGavrilivka from '../../../public/images/portfolio/Gavrilivka/fourth.jpg';
 
+// Gavrilivka
 export const gatneImages = [firstGatne, secondGatne, thirdGatne, fourthGatne];
 export const tarasivkaImages = [
   firstTarasivka,
