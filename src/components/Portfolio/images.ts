@@ -17,6 +17,7 @@ import firstKatyzhanka from '../../../public/images/portfolio/Katyzhanka/first.j
 import secondKatyzhanka from '../../../public/images/portfolio/Katyzhanka/second.jpg';
 import thirdKatyzhanka from '../../../public/images/portfolio/Katyzhanka/third.jpg';
 import fourthKatyzhanka from '../../../public/images/portfolio/Katyzhanka/fourth.jpg';
+import fifthKatyzhanka from '../../../public/images/portfolio/Katyzhanka/fifth.jpg';
 
 import firstZabutcha from '../../../public/images/portfolio/Zabutcha/first.jpg';
 import secondZabutcha from '../../../public/images/portfolio/Zabutcha/second.jpg';
@@ -46,6 +47,7 @@ export const katyzhankaImages = [
   secondKatyzhanka,
   thirdKatyzhanka,
   fourthKatyzhanka,
+  fifthKatyzhanka,
 ];
 
 export const zabutchaImages = [firstZabutcha, secondZabutcha];

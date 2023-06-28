@@ -94,6 +94,9 @@
       content: none;
     }
   }
+  .numericContainer {
+    bottom: 100px;
+  }
 }
 
 @include sm {
@@ -129,6 +132,7 @@
     line-height: 0;
     position: relative;
     display: flex;
+    top: 0px;
     gap: 10px;
 
     &:before {

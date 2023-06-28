@@ -1,18 +1,18 @@
-import { slide as Menu } from "react-burger-menu";
-import { Link } from "react-scroll";
+import { slide as Menu } from 'react-burger-menu';
+import { Link } from 'react-scroll';
 
-import "./HeaderMobile.css";
+import './HeaderMobile.css';
 
 const HeaderMobile: React.FC = (): JSX.Element => {
   const mobileMenuList = [
-    { label: "Головна", link: "home" },
-    { label: "Послуги", link: "servicesMobile" },
-    { label: "Про нас", link: "companyMobile" },
-    { label: "Наша робот", link: "portfolio" },
-    { label: "Зв'яжіться з нами", link: "contactUs" },
+    { label: 'Головна', link: 'home' },
+    { label: 'Послуги', link: 'servicesMobile' },
+    { label: 'Про нас', link: 'companyMobile' },
+    { label: 'Наша робот', link: 'portfolio' },
+    { label: "Зв'яжіться з нами", link: 'contactUs' },
   ];
   return (
-    <Menu className="flex flex-col text-white" right noOverlay>
+    <Menu className="flex flex-col text-white z-50" right noOverlay>
       {mobileMenuList.map((link, index) => {
         return (
           <Link

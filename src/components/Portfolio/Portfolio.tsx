@@ -92,19 +92,19 @@ const Portfolio: React.FC = (): JSX.Element => {
 
   return (
     <section className={styles.container} id="portfolio">
-      <div className=" md:max-w-7xl px-10 mx-auto py-10 xl:pt-24 xl:pb-28">
+      <div className=" md:max-w-7xl px-10 mx-auto flex flex-col content-center py-10 xl:pt-24 xl:pb-28">
         <h2 className="font-bold text-5xl mb-14 ">Наша робота</h2>
 
-        <div className="">
-          <p
-            className={`text-2xl md:text-xl lg:text-2xl xl:text-3xl my-14 md:my-7 ${show}`}
-          >
-            {portfolioData[selectedImage].text}
-          </p>
-        </div>
+        <p
+          className={`text-2xl md:text-xl lg:text-2xl xl:text-3xl my-14 md:my-7 ${show}`}
+        >
+          {portfolioData[selectedImage].text}
+        </p>
 
-        <div className="flex items-center relative mx-auto justify-center flex-col-reverse md:flex-row md:pb-0 pb-10">
-          <div className={`flex md:pr-10 ${show}`}>
+        <div className="flex justify-center items-center relative mx-auto  flex-col-reverse md:flex-row md:pb-0 pb-10">
+          <div
+            className={`flex justify-center items-center sm:max-w-sm ${show}`}
+          >
             <ImageSlider
               images={portfolioData[selectedImage].images}
               currentIndex={currentIndex}
@@ -117,7 +117,9 @@ const Portfolio: React.FC = (): JSX.Element => {
             />
           </div>
 
-          <div className="text-xl xs:translate-y-36 md:translate-y-0 md:-translate-x-5 absolute md:relative md:px-0 flex flex-row md:flex-col gap-7">
+          <div
+            className={`${styles.numericContainer} text-xl translate-y-24 xs:translate-y-36 md:translate-y-24 lg:-translate-y-0 md:translate-x-52 lg:translate-x-56 absolute md:relative md:px-0 flex flex-row md:flex-col gap-7 z-40`}
+          >
             {portfolioData.map(
               (el, index: number): JSX.Element => (
                 <div
