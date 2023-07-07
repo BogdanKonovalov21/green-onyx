@@ -27,7 +27,6 @@ const ImageSlider: React.FC<SliderProps> = ({
       prevIndex === images.length - 1 ? 0 : prevIndex + 1
     );
   };
-
   return (
     <div className="hidden md:flex md:justify-center mx-auto w-full">
       <div className="flex mx-auto items-center gap-10">
@@ -51,10 +50,11 @@ const ImageSlider: React.FC<SliderProps> = ({
                 <Image
                   src={image}
                   alt={`Slide ${index + 1}`}
-                  layout="fill"
-                  objectFit="contain"
-                  priority={true}
+                  fill
+                  priority
                   quality={100}
+                  style={{ objectFit: 'contain' }}
+                  placeholder="blur"
                 />
               </div>
             ))}
